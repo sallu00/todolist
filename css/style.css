@@ -1,0 +1,44 @@
+	body{
+		overflow-x:hidden;
+	}	
+	#heading{
+		text-align: center;
+    		padding: 30px;
+    		font-size: 30px;
+    		color: cadetblue;
+	}
+	.items{
+		display: block;
+    		width: 100%;
+    		text-align: left;
+    		height: 276px;
+    		border-radius: 10px;
+    		border: 1px solid gray;
+    		margin: auto;
+    		margin-top: 50px;
+		
+	}
+	#lists{
+		padding-left: 20px;
+    		padding-top: 10px;
+    		font-size: 21px;
+    		color: darkcyan;
+	}
+	#del{
+		float: right;
+    		margin-right: 10px;
+	}
+	#del:hover{
+		cursor:pointer;
+	}
+	#error{
+		color:red;
+		font-size: 15px;
+    		margin-top: 10px;
+	}
+	#sub{
+		float: right;
+    		position: absolute;
+    		right: 79px;
+
+	}
