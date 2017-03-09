@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="../js/angularjs.js"></script>
+</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<p id="heading">TO DO LIST</p>
+			<div class="row">
+					<div class="col-md-4"></div>
+					<div style="text-align: center;" class="col-md-4">
+						<form ng-submit="add()" name="myForm" class="form-inline">
+							<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+									<input class="form-control" type="text" ng-model="item" placeholder="to do list">
+							</div>
+							<input type="submit" class="btn btn-primary" value="ADD" />
+						</form>
+						<div class="items">
+							<div id="lists" ng-repeat="x in todolist">
+								<form name="myForm">
+								<input ng-model="list_items" name="check" style="margin-right: 5px;" value="{{x.item}}" type="checkbox" />{{x.item}}
+								<input ng-click="changeStatus($index)" id="sub" type="button" value="{{x.status}}" class="btn btn-success" />
+								
+								<i id="del" ng-if="list_items" title="delete" ng-click="removeitem($index)" class="fa fa-remove"></i>
+								</form>
+							</div>
+						</div>
+						<p id="error">{{error}}</p>
+						
+					</div>
+					<div class="col-md-4"></div>
+				</div>
+		</div>
+	</body>
+</html>
+# todolist
